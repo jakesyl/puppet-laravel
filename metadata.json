@@ -14,8 +14,8 @@
   	}
   ],
   "project_page": "https://github.com/darkmantle/puppet-laravel.git",
-  "source": "https://github.com/darkmantle/puppet-laravel.gi",
+  "source": "https://github.com/darkmantle/puppet-laravel.git",
   "summary": "Adds Laravel support to the Darkmantle Suite of Puppet Configurations",
   "tags": [],
-  "version": "1.0.0"
+  "version": "1.0.1"
 }

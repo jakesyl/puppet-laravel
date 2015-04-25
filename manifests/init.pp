@@ -13,14 +13,17 @@
 class laravel {
   
   # empty webroot
-  exec {"empty_webroot":
-    command => "cd /vagrant/webroot && sudo rm -rf *"
+  file {"/vagrant/webroot":
+    ensure => directory,
+    recurse => true,
+    purge => true,
+    force => true
   }
-  
   # create new project
   exec {"create_project":
-    command => "cd /vagrant/webrot && composer create-project laravel/laravel . ",
+    command => "composer create-project laravel/laravel --prefer-dist .",
+    cwd => "/vagrant/webroot",
     onlyif => "test -f /usr/bin/composer",
-    require => Exec["empty_webroot"]
+    require => [File["/vagrant/webroot"],Package["php5-mcrypt"]]
   }
 }
