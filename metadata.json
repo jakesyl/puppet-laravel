@@ -17,5 +17,5 @@
   "source": "https://github.com/darkmantle/puppet-laravel.git",
   "summary": "Adds Laravel support to the Darkmantle Suite of Puppet Configurations",
   "tags": [],
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
