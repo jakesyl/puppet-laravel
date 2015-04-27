@@ -24,6 +24,6 @@ class laravel {
     command => 'composer create-project laravel/laravel --prefer-dist .',
     cwd     => '/vagrant/webroot',
     onlyif  => 'test -f /usr/bin/composer',
-    require => [File['/vagrant/webroot'], Package['php5-mcrypt']]
+    require => [File['/vagrant/webroot'], Package['php5-mcrypt'], Package['apache2'],Package['php5'],Package['php5-mysql'],Package['mysql-server']]
   }
 }

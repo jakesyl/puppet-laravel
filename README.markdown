@@ -27,7 +27,13 @@ Exec {
   path => ["/usr/bin", "/bin", "/usr/sbin", "/sbin", "/usr/local/bin", "/usr/local/sbin"]
 }
 
-include lamp
+# view darkmantle/lamp documentation for custom setup
+include lamp::apache
+include lamp::php
+include lamp::mysql
+include lamp::phpmyadmin
+
+# note: this removes any previous laravel projects and creates a new empty one
 include laravel
 
 exec {"apt-get update":
